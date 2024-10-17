@@ -3,9 +3,10 @@ function print(a) {
 }
 
 const burger = document.querySelector('.boxBurger');
-const sidenav = document.getElementById("mySideNav");
+const sidenav = document.getElementById("sideNav");
 let isBurgerActive;
 
+let currentSlide = 0;
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -19,4 +20,16 @@ document.addEventListener('DOMContentLoaded', () => {
             sidenav.classList.remove("active");
         }
     })
+    /*setInterval(()=>{
+        moveSlide(+1)
+    }, 5000)*/
+
+
 })
+
+function moveSlide(direction) {
+    const slides = document.querySelector('.carouselSlides');
+    const totalSlides = slides.children.length;
+    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+    slides.style.transform = `translateX(-${currentSlide * 100}vw)`;
+}

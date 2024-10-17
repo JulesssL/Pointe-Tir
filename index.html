@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleindex.css">
     <link rel="icon" href="ressources/img/icon.png" type="image/x-icon">
     <title>Pointe & Tir</title>
 </head>
@@ -18,16 +19,15 @@
             <div class="containerLinesBurger">
                 <div class="lineBurger"></div>
                 <div class="lineBurger"></div>
-                <div class="lineBurger"></div>
             </div>
         </button>
 
-        <nav id="mySideNav" class="sideNav">
+        <nav id="sideNav" class="sideNav">
             <ul class="burgerList">
                 <li><a class="burgerA" href="index.html">Accueil</li></a>
-                <li><a class="burgerA" href="projets.html">Mes Projets</a></li>
+                <li><a class="burgerA" href="projets.html">Shop</a></li>
                 <li><a class="burgerA" href="propos.html">A propos</a></li>
-                <li><a class="burgerA" href="">Contact</a></li>
+                <li><a class="burgerA" href="">Compétitions</a></li>
             </ul>
         </nav>
 
@@ -44,6 +44,50 @@
                 <h1 class="heroTitle">Nos meilleurs articles</h1>
                 <h3 class="heroSubTitle">Découvrez nos offres</h3>
                 <a href="#" class="heroButton">Découvrir</a>
+            </div>
+        </section>
+
+        <section class="actu">
+            <h2 class="redTitle">Les actualités</h2>
+            <div class="carouselActu">
+                <button class="carouselButton left" onclick="moveSlide(-1)">❮</button>
+                <div class="carouselSlides">
+                    <div class="slide">
+                        <img src="ressources/img/actuImg.png" alt="Image représentant l'actualité, on y voit un cochonet et 2 boules de pétanque." class="actuImg">
+                        <h3 class="actuTitle">Actualité 1</h3>
+                        <a href="#" class="actuButton">Voir l'article</a>
+                    </div>
+                    <div class="slide">
+                        <img src="ressources/img/actuImg.png" alt="Image représentant l'actualité, on y voit un cochonet et 2 boules de pétanque." class="actuImg">
+                        <h3 class="actuTitle">Actualité 2</h3>
+                        <a href="#" class="actuButton">Voir l'article</a>   
+                    </div>
+                    <div class="slide">
+                        <img src="ressources/img/actuImg.png" alt="Image représentant l'actualité, on y voit un cochonet et 2 boules de pétanque." class="actuImg">
+                        <h3 class="actuTitle">Actualité 3</h3>
+                        <a href="#" class="actuButton">Voir l'article</a>
+                    </div>
+                    <div class="slide">
+                        <img src="ressources/img/actuImg.png" alt="Image représentant l'actualité, on y voit un cochonet et 2 boules de pétanque." class="actuImg">
+                        <h3 class="actuTitle">Actualité 4</h3>
+                        <a href="#" class="actuButton">Voir l'article</a>
+                    </div>
+                    <div class="slide">
+                        <img src="ressources/img/actuImg.png" alt="Image représentant l'actualité, on y voit un cochonet et 2 boules de pétanque." class="actuImg">
+                        <h3 class="actuTitle">Actualité 5</h3>
+                        <a href="#" class="actuButton">Voir l'article</a>
+                    </div>
+                </div>
+                <button class="carouselButton right" onclick="moveSlide(1)">❯</button>
+              </div>              
+        </section>
+
+        <section class="presentation">
+            <h2 class="redTitle">Qui sommes-nous ?</h2>
+            <div class="divPresentation">
+                <img src="ressources/img/famille.png" alt="Image représentant la famille">
+                <h4 class="smallRedTitle">Une histoire de famille</h4>
+                <p>Pointe & Tir est une entreprise de découpe et vente en ligne spécialisée dans la fabrication de cochons et de boules de pétanque. Nous avons fondé notre entreprise en 2020, avec la mission d'offrir un service de qualité et un confort au client.</p> 
             </div>
         </section>
 

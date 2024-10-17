@@ -19,7 +19,7 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    height: 7vh;
+    height: 10vh;
 }
 
 .boxBurger{
@@ -27,46 +27,37 @@
     height: 70px;
     border: none;
     cursor: pointer;
-    top: 0px;
-    left: 0px;
     z-index: 99;
     background-color: #ffffff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .containerLinesBurger{
     width: 70%;
     height: 70%;
-    position: relative;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .lineBurger{
     width: 100%;
-    height: 5px;
+    height: 7px;
     background-color: #000;
     position: relative;
 }
 
 .lineBurger:nth-child(1){
-    top:0px;
     left: 0px;
     transform: rotate(0deg);
     transition: transform 0.4s ease-in-out, top 0.4s ease-in-out;
 }
 
-.lineBurger:nth-child(2){
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 1;
-    transition: 0.2s 0.2s ease-in-out;
-}
 
-.lineBurger:nth-child(3){
-    bottom:0px;
+.lineBurger:nth-child(2){
     left:0px;
     transform:rotate(0deg);
     transition: transform 0.4s ease-in-out, bottom 0.4s  ease-in-out;
@@ -74,28 +65,23 @@
 
 
 .boxBurger.active .lineBurger:nth-child(1){
-    top:calc(50% - 5%);
+    top: 25%;
     transform: rotate(45deg) ;
     transition: top 0.4s ease-in-out, left 0.4s ease-in-out, transform  0.4s ease-in-out;
 }
 
 .boxBurger.active .lineBurger:nth-child(2){
-    opacity: 0;
-    transition: 0s ease-in-out;
-
-}
-
-.boxBurger.active .lineBurger:nth-child(3){
-    bottom:calc(50% - 5%);
+    bottom:25%;
     transform: rotate(-45deg) ;
     transition: top 0.4s 0.4s ease-in-out, left 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
 .sideNav {
-    height: 100vh;
-    width: 60%;
+    top: 0;
+    width: 80dvw;
+    height: 100dvh;
     position: fixed;
-    left: -60%;
+    left: -80dvw;
     background-color: #ff0004;
     transition: 0.3s ease;
     z-index: 98;
@@ -103,11 +89,11 @@
 
 .burgerList {
     padding-left: 10%;
-    padding-top: 90px;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
+    gap: 2vh;
     align-items: left;
 }
 
@@ -128,59 +114,39 @@
 /** Common Styles **/
 
 #logoHeader{
-    width: 120px;
+    height: 8vh;
     background-size: cover;
     top: 8px;
     left: calc(50% - 60px);
 }
 
 #logoPanier{
-    width: 50px;
+    height: 5vh;
     background-size: cover;
-    top: 7px;
-    right: 7px;
+    margin: 1em;
 }
 
-/** Hero Section **/
-
-.heroSection{
-    height: 93vh;
-    background-image: url('ressources/img/heroImage.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.heroContent{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 3em;
-}
-
-.heroTitle{
-    font-size: 48px;
-    font-weight: 800;
-    color: #fff;
+.redTitle{
+    font-size: 32px;
+    font-weight: 600;
+    color: #ff0004;
+    padding: 0.5em;
     text-align: center;
 }
 
-.heroSubTitle{
+.smallRedTitle{
     font-size: 24px;
-    color: #fff;
+    font-weight: 500;
+    color: #ff0004;
+    padding: 0.5em;
+    text-align: left;
+}
+
+p{
+    width: 90%;
+    margin: auto;
+    padding: 0.5em;
+    font-size: 18px;
+    color: #000;
     font-weight: 400;
-    text-align: center;
 }
-
-.heroButton{
-    font-size: 20px;
-    color: #fff;
-    text-transform: uppercase;
-    padding: 0.7em 1em;
-    border-radius: 5px;
-    border: 2px solid #fff;
-}
-
