@@ -8,6 +8,7 @@ let isBurgerActive;
 
 let currentSlide = 0;
 
+let intervalCarousel;
 
 document.addEventListener('DOMContentLoaded', () => {
     burger.addEventListener('click', e => {
@@ -20,9 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
             sidenav.classList.remove("active");
         }
     })
-    let intervalCarousel = setInterval(()=>{
-        moveSlide(+1)
-    }, 5000)
+    intervalCarousel = setInterval(moveSlide(+1), 5000);
+    
 
 
 })
@@ -33,5 +33,6 @@ function moveSlide(direction) {
     currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
     slides.style.transform = `translateX(-${currentSlide * 100}vw)`;
     clearInterval(intervalCarousel);
-    console.log(intervalCarousel);
+    intervalCarousel = setInterval(moveSlide(+1), 5000);
+    
 }

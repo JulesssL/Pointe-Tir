@@ -12,17 +12,14 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: left;
+    padding: 0.5em;
     border-radius: 1em;
     box-shadow: 0px 0px 10px 2px #00000039;
     width: 40vw;
-    height: 250px;
+    height: 200px;
     border-radius: 5px;
 }
 
-.imgArticle{
-    width: 90%;
-    margin: 5% auto;
-}
 
 .nomArticle{
     font-size: 14px;
