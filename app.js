@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
             sidenav.classList.remove("active");
         }
     })
-    /*setInterval(()=>{
+    let intervalCarousel = setInterval(()=>{
         moveSlide(+1)
-    }, 5000)*/
+    }, 5000)
 
 
 })
@@ -32,4 +32,6 @@ function moveSlide(direction) {
     const totalSlides = slides.children.length;
     currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
     slides.style.transform = `translateX(-${currentSlide * 100}vw)`;
+    clearInterval(intervalCarousel);
+    console.log(intervalCarousel);
 }

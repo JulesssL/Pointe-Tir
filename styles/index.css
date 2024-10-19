@@ -114,3 +114,16 @@
     border: 1px solid #ff0004;
     padding: 0.7em 0.9em;
 }
+
+
+/** Présentation **/
+
+.divPresentation{
+    margin-top: 1em;
+}
+
+.imgPresentation{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}

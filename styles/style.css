@@ -134,7 +134,17 @@
     text-align: center;
 }
 
+.blackTitle{
+    font-size: 32px;
+    font-weight: 800;
+    color: #000;
+    padding: 0.5em;
+    text-align: center;
+}
+
 .smallRedTitle{
+    width: 90%;
+    margin: auto;
     font-size: 24px;
     font-weight: 500;
     color: #ff0004;
