@@ -5,6 +5,7 @@
     align-items: center;
     gap: 2vh;
     flex-wrap: wrap;
+    margin: 2vh auto;
 }
 
 .article{
@@ -31,4 +32,8 @@
     font-size: 18px;
     color: #000;
     font-weight: 600;
+}
+
+.checked{
+    color: orange;
 }
