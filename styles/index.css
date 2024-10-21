@@ -132,3 +132,24 @@
     height: 250px;
     object-fit: cover;
 }
+
+/** Partanires **/
+
+.divPartenaire {
+    width: 100%;
+    overflow: hidden;
+}
+  
+.carousel-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
+}
+
+.logo-partenaire{
+    width: 30vw;
+    flex-shrink: 0;
+}
+  

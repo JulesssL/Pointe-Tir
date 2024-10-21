@@ -21,18 +21,37 @@ document.addEventListener('DOMContentLoaded', () => {
             sidenav.classList.remove("active");
         }
     })
-    intervalCarousel = setInterval(moveSlide(+1), 5000);
-    
-
-
 })
+
+
+const threshold = .1
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold
+}
+
+const handleIntersect = function (entries, observer) {
+  entries.forEach(function (entry) {
+    if (entry.intersectionRatio > threshold) {
+      entry.target.classList.add('reveal-visible')
+      observer.unobserve(entry.target)
+    }
+  })
+}
+
+
+const observer = new IntersectionObserver(handleIntersect, options)
+const targets = document.querySelectorAll('[class*="reveal-"]')
+targets.forEach(function (target) {
+    observer.observe(target)
+})
+
+
 
 function moveSlide(direction) {
     const slides = document.querySelector('.carouselSlides');
     const totalSlides = slides.children.length;
     currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
     slides.style.transform = `translateX(-${currentSlide * 100}vw)`;
-    clearInterval(intervalCarousel);
-    intervalCarousel = setInterval(moveSlide(+1), 5000);
-    
 }
