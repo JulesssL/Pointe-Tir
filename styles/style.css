@@ -218,7 +218,7 @@ footer {
 .reveal-visible{
     opacity: 1;
     transform: translateY(0px);
-    transition: 1s ease, 
+    transition: all 0.5s ease-in-out;
 }
 
 .reveal-2{
