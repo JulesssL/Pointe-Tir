@@ -2,6 +2,10 @@
 
 /** Carousel Actu **/
 
+.actuDesktop{
+    display: none;
+}
+
 .carouselActu {
     position: relative;
     min-width: 100%;
