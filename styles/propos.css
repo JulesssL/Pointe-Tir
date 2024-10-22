@@ -27,4 +27,25 @@
     border-radius: 5px;
     border: 2px solid #000;
     background-color: #ffffff00;
+    transition: .2s ease-in-out;
+}
+
+@media (min-width: 768px) {
+    .pMagasin{
+        width: 60%;
+    }
+
+    .aMagasin:hover{
+        background-color: #000;
+        color: #fff;
+    }
+
+    .imgMagasin{
+        width: 35%;
+        border-radius: 5px;
+    }
+
+    iframe{
+        width: 40%;
+    }
 }

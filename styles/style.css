@@ -12,6 +12,10 @@
 
 /** MenuBurger **/
 
+.menu{
+    display: none;
+}
+
 .burgerMenu{
     background-color: #fff;
     display: flex;
@@ -232,3 +236,100 @@ footer {
 .reveal-4{
     transition-delay: .3s;
 }
+
+@media (min-width: 768px) {
+    .burgerMenu{
+        display: none;
+    }
+
+    .menu{
+        position: sticky;
+        top:0;
+        z-index: 99999;
+        background-color: #fff;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+        padding: 0.3em 3em;
+    }
+
+    .menuList{
+        display: flex;
+        gap: 2em;
+        align-items: center;
+    }
+
+    .menuA{
+        font-size: 1.5em;
+        color: #ff0004;
+        position: relative;
+    }
+
+    .menuA::before{
+        content: '';
+        background-color: #000;
+        position: absolute;
+        border-radius: 5em;
+        left: calc(50% - 5px);
+        bottom: 0px;
+        width: 10px;
+        height: 1px;
+        z-index: 999999;
+        transition: all .2s ease-in-out;
+    }
+
+    .menuA:hover::before{
+        left: 0;
+        width: 100%;
+    }
+
+    /** footer **/
+
+    footer {
+        background-color: #d9d9d9;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2vh;
+        padding-top: 1vh;
+        margin-top: 5vh;
+    }
+
+    .footerPages{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 4vw;
+    }
+
+    .footerPage{
+        font-size: 14px;
+        color: #000;
+        font-weight: 600;
+    }
+
+    .footerRS{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 4vw;
+    }
+
+    .footerRéseauImg{
+        width: 20px;
+        height: 20px;
+    }
+
+    .footerCopy{
+        font-size: 9px;
+        color: #000;
+        font-weight: 400;
+    }
+}
+    

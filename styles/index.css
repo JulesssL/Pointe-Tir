@@ -43,6 +43,10 @@
 
 /** Carousel Actu **/
 
+.actuDesktop {
+    display: none;
+}
+
 .carouselActu {
     position: relative;
     min-width: 100%;
@@ -122,7 +126,7 @@
     margin: 1em auto;
 }
 
-.divPresentation > p{
+.divPresentation  p{
     width: 90%;
     margin: auto;
 }
@@ -151,5 +155,114 @@
 .logo-partenaire{
     width: 30vw;
     flex-shrink: 0;
+}
+
+
+@media (min-width: 768px) {
+    .heroSection{
+        height: 90vh;
+        background:linear-gradient(to top, rgba(59, 59, 59, 0.52), rgba(32, 32, 32, 0.73)), url('../ressources/img/magasin.png');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .heroButton{
+        font-size: 20px;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 0.7em 1em;
+        border-radius: 5px;
+        border: 2px solid #fff;
+        transition: .1s ease-in-out;
+    }
+
+    .heroButton:hover{
+        background-color: #fff;
+        color: #000;
+        border: 2px solid #000;
+    }
+
+
+    /** Carousel Actu **/
+
+    .carouselActu {
+        display:none;
+    }
+
+    /** Actu **/
+
+    .actuDesktop{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 3em;
+    }
+
+    .actuImg{
+        border-radius: 5px;
+    }
+
+    .carteActu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        padding: 1em;
+        border: 2px solid #d9d9d9;
+        border-radius: 5px;
+    }
+    
+    /** Présentation **/
+
+    .presentation{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3vh;
+    }
+
+    .divPresentation{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 5vw;
+    }
+
+    .divPresentation:nth-child(even){
+        flex-direction: row-reverse;
+    }
+    
+    .divPresText{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+    }
+
+    .imgPresentation{
+        width: 400px;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    /** Partanires **/
+    
+    .carousel-inner {
+        
+        flex-direction: row;
+        
+    }
+
+    .logo-partenaire{
+        width: 10vw;
+        flex-shrink: 0;
+    }
 }
   
